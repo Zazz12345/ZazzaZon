@@ -1,0 +1,131 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0d1522;
+  color: #f3f4f6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.subtitle {
+  color: #cbd5e1;
+}
+
+.search-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input,
+button,
+select {
+  border: 1px solid #334155;
+  background: #182235;
+  color: #f8fafc;
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+}
+
+#query {
+  flex: 1;
+}
+
+.controls {
+  margin-top: 0.85rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.65rem;
+  align-items: end;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.secondary {
+  background: #1e293b;
+}
+
+.filters {
+  margin-top: 0.9rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.facet {
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0.6rem;
+  background: #0f1b2e;
+}
+
+.facet h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.facet-options {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  cursor: pointer;
+}
+
+.chip.active {
+  background: #1d4ed8;
+}
+
+.results {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 0.8rem;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  background: #101a2c;
+  padding: 0.75rem;
+}
+
+.thumb {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 7px;
+}
+
+.title {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.meta,
+.tags {
+  color: #cbd5e1;
+  margin: 0.3rem 0 0;
+}
+
+.status-error {
+  color: #fca5a5;
+}

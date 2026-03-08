@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZazzaZon Local Search</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>ZazzaZon Local Search</h1>
+      <p class="subtitle">Search Amazon US + AU, then apply local transparent sorting/filtering only.</p>
+
+      <form id="searchForm" class="search-row">
+        <input id="query" name="query" type="text" placeholder='Try: "usb c hub" -dock 4k' required />
+        <button type="submit">Search</button>
+      </form>
+
+      <section class="controls">
+        <label>
+          Sort by
+          <select id="sortBy">
+            <option value="relevance">Relevance (as fetched)</option>
+            <option value="priceAsc">Price ↑</option>
+            <option value="priceDesc">Price ↓</option>
+            <option value="ratingDesc">Rating ↓</option>
+            <option value="reviewsDesc">Review count ↓</option>
+          </select>
+        </label>
+
+        <label>
+          Local expression filter
+          <input id="expressionFilter" placeholder='Supports quoted phrases and exclusions: "usb c" -adapter' />
+        </label>
+
+        <button id="clearFilters" type="button" class="secondary">Clear filters</button>
+      </section>
+
+      <section id="filters" class="filters"></section>
+
+      <section id="status"></section>
+      <section id="results" class="results"></section>
+    </main>
+
+    <template id="resultTemplate">
+      <article class="card">
+        <img class="thumb" alt="Product image" />
+        <div>
+          <a class="title" target="_blank" rel="noopener noreferrer"></a>
+          <p class="meta"></p>
+          <p class="tags"></p>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
